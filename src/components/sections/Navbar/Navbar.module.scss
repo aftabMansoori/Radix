@@ -1,0 +1,36 @@
+.nav_header {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+.nav_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80%;
+    height: 50px;
+    margin: 0 auto;
+}
+
+.nav_logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+.nav_ctaButton {
+    border: 1px solid #D1D5DB;
+    background: transparent;
+    color: #D1D5DB;
+    padding: 8px 24px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.2s;
+}
+
+.nav_ctaButton:hover {
+    border-color: var(--color-primary-blue);
+    color: var(--color-primary-blue);
+}

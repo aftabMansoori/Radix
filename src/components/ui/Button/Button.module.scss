@@ -1,0 +1,37 @@
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 999px;
+    /* Pill shape */
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.primary {
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+.primary:hover {
+    background-color: #0033cc;
+    box-shadow: 0 4px 12px rgba(0, 68, 255, 0.3);
+}
+
+.outline {
+    background-color: transparent;
+    border-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 0.5rem 1.25rem;
+    font-size: 0.9rem;
+}
+
+.outline:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: white;
+}

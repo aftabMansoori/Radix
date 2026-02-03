@@ -1,0 +1,185 @@
+.section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    scroll-snap-align: start;
+}
+
+
+.leftColumn {
+    position: absolute;
+}
+
+.visualsContainer {
+    position: relative;
+    width: 500px;
+    /* Fixed reference width for stability */
+    height: 500px;
+
+    /* Fixed reference height for stability */
+    /* This ensures shapes stay relative to this box */
+    .rectangleShape {
+        z-index: 1;
+        filter: invert(#FF0000);
+        pointer-events: none;
+        width: 185%;
+        height: auto;
+        position: absolute;
+        top: -61%;
+        left: -109%;
+        transform: rotate(70deg);
+    }
+
+    .ellipseShape {
+        z-index: 5;
+        pointer-events: none;
+        /* width: 150%; */
+        /* height: 150%; */
+        position: absolute;
+        bottom: -53%;
+        left: -110%;
+    }
+
+}
+
+.illustrationWrapper {
+    position: relative;
+    z-index: 10;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.content {
+    max-width: 40%;
+    position: relative;
+    z-index: 20;
+
+    .title {
+        font-size: 2.5rem;
+        font-weight: 800;
+        margin-bottom: 2rem;
+        color: var(--text-dark);
+        line-height: 1.2;
+    }
+
+    .description {
+        font-size: 1rem;
+        line-height: 1.7;
+        color: var(--text-gray);
+        margin-bottom: 2rem;
+    }
+}
+
+.learnMore {
+    font-weight: 800;
+    color: var(--text-dark);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 1200px) {
+    .visualsContainer {
+        width: 420px;
+        height: 420px;
+    }
+
+    .rectangleShape {
+        width: 160%;
+        top: -55%;
+        left: -95%;
+    }
+
+    .ellipseShape {
+        bottom: -45%;
+        left: -95%;
+    }
+
+    .content {
+        max-width: 45%;
+
+        .title {
+            font-size: 24px;
+        }
+
+        .description {
+            font-size: 12px;
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+        }
+    }
+}
+
+
+@media (max-width: 1024px) {
+    .section {
+        padding: 4rem 2rem;
+    }
+
+    .visualsContainer {
+        width: 380px;
+        height: 380px;
+    }
+
+    .rectangleShape {
+        width: 150%;
+        top: -50%;
+        left: -85%;
+    }
+
+    .ellipseShape {
+        bottom: -40%;
+        left: -85%;
+    }
+
+    .content {
+        max-width: 40%;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column-reverse;
+        padding: 4rem 1.5rem;
+        gap: 3rem;
+    }
+
+    .leftColumn {
+        display: none;
+        position: relative;
+    }
+
+    .visualsContainer {
+        width: 100%;
+        max-width: 360px;
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+
+    .content {
+        max-width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .visualsContainer {
+        max-width: 300px;
+    }
+
+    .content .title {
+        font-size: 1.75rem;
+    }
+
+    .content .description {
+        font-size: 0.95rem;
+    }
+}
