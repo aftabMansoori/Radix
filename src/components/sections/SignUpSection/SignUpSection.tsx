@@ -11,9 +11,9 @@ import { signupUser } from '@/app/actions/signup';
 export const SignUpSection = () => {
     const [email, setEmail] = useState('');
     const [error, setError] = useState('');
-    const controls = useAnimation();
-
     const [loading, setLoading] = useState(false);
+
+    const controls = useAnimation();
 
     const handleSubmit = async () => {
         if (!email) {
@@ -111,7 +111,7 @@ export const SignUpSection = () => {
                     src="/Signup/Signup_Shape.svg"
                     alt="Signup Shape"
                     width={400}
-                    height={500}
+                    height={450}
                     className={styles.shapeImage}
                 />
             </motion.div>

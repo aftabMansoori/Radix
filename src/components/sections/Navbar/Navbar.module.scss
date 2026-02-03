@@ -34,3 +34,11 @@
     border-color: var(--color-primary-blue);
     color: var(--color-primary-blue);
 }
+
+@media (max-width: 768px) {
+
+    .nav_container {
+        max-width: 90%;
+    }
+
+}

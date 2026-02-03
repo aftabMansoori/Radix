@@ -148,8 +148,10 @@
 @media (max-width: 768px) {
     .section {
         flex-direction: column-reverse;
-        padding: 4rem 1.5rem;
+        padding: 0 1.5rem;
         gap: 3rem;
+        scroll-snap-align: none;
+        min-height: 85vh;
     }
 
     .leftColumn {

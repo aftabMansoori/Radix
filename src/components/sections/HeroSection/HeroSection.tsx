@@ -9,13 +9,16 @@ import { Input } from '@/components/ui/Input/Input';
 import { LogoGrid } from '@/components/ui/Logo/LogoGrid';
 
 import { HeroIllustration } from './HeroIllustration';
-import RightBlob from './test';
+
+import { signupUser } from '@/app/actions/signup';
+
 
 export const HeroSection = () => {
     const [email, setEmail] = useState('');
     const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
 
-    const handleSubmit = () => {
+    const handleSubmit = async () => {
         if (!email) {
             setError('Email is required');
             return;
@@ -25,8 +28,24 @@ export const HeroSection = () => {
             return;
         }
         setError('');
-        alert(`Joined with: ${email}`);
+        setLoading(true);
+
+        try {
+            const result = await signupUser(email);
+            if (result.success) {
+                alert(result.message);
+                setEmail('');
+            } else {
+                setError(result.message || 'Something went wrong');
+            }
+        } catch (e) {
+            console.error(e);
+            setError('Something went wrong. Please try again.');
+        } finally {
+            setLoading(false);
+        }
     };
+
 
     return (
         <section style={{ position: 'relative' }}>

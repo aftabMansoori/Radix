@@ -26,8 +26,8 @@
 @media (max-width: 1024px) {
     .grid {
         grid-template-columns: repeat(2, 1fr);
-        max-width: 100%;
         gap: 3rem 1.5rem;
+        max-width: fit-content;
     }
 }
 
@@ -42,7 +42,26 @@
 
 @media (max-width: 480px) {
     .grid {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
         gap: 2rem;
+        align-items: center;
+        padding-bottom: 1rem;
+        /* scroll-snap-type: x mandatory; */
+        -webkit-overflow-scrolling: touch;
+
+        /* Hide scrollbar */
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    .grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .logoItem {
+        flex: 0 0 auto;
+        /* scroll-snap-align: start; */
     }
 }

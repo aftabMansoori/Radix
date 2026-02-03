@@ -50,7 +50,6 @@
 @media (max-width: 1024px) {
     .section {
         min-height: auto;
-        justify-content: flex-start;
         padding: 6rem 8%;
         gap: 3rem;
     }
@@ -66,6 +65,7 @@
     .section {
         padding: 5rem 6%;
         gap: 2.5rem;
+        scroll-snap-align: none;
     }
 
     .contentWrapper {

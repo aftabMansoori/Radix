@@ -9,8 +9,8 @@
     /* padding: 4rem 6vw; */
     scroll-snap-align: start;
     position: relative;
-    // overflow-x: hidden;
     overflow: hidden;
+    // overflow-x: hidden;
     /* background: white; */
 }
 
@@ -51,6 +51,13 @@
 
 
 @media (max-width: 768px) {
+    .section {
+        scroll-snap-align: none;
+        padding: 0 1.5rem;
+        min-height: 60vh;
+        overflow: visible;
+    }
+
     .form {
         flex-direction: column;
     }
